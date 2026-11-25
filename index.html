@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>UAS Ganjil Ekonomi Kelas X</title>
+<style>
+:root{--bg:#eef2ff;--card:#fff;--tx:#1e1b4b;--mut:#64748b;--pri:#6d28d9;--pri2:#2563eb;--ok:#16a34a;--warn:#f59e0b;--no:#e2e8f0;--bad:#dc2626;--bd:#c7d2fe;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f172a;--card:#1e293b;--tx:#e2e8f0;--mut:#94a3b8;--no:#334155;--bd:#475569}}
+:root[data-theme="dark"]{--bg:#0f172a;--card:#1e293b;--tx:#e2e8f0;--mut:#94a3b8;--no:#334155;--bd:#475569}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--tx);min-height:100vh;user-select:none;-webkit-user-select:none}
+.hero{background:linear-gradient(135deg,#6d28d9,#2563eb 60%,#06b6d4);color:#fff;padding:18px 16px;text-align:center}
+.hero h1{margin:0;font-size:1.25rem}.hero p{margin:4px 0 0;opacity:.9;font-size:.9rem}
+.wrap{max-width:980px;margin:0 auto;padding:14px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:18px;box-shadow:0 4px 18px rgba(79,70,229,.12)}
+label{display:block;font-weight:600;font-size:.85rem;margin:12px 0 4px}
+input{width:100%;padding:11px 12px;border-radius:10px;border:2px solid var(--bd);background:var(--bg);color:var(--tx);font-size:1rem;user-select:text;-webkit-user-select:text}
+input:focus{outline:none;border-color:var(--pri)}
+button{font:inherit;cursor:pointer;border:0;border-radius:10px;padding:11px 16px;font-weight:700;color:#fff}
+.b1{background:linear-gradient(90deg,#6d28d9,#2563eb)}.b2{background:var(--warn);color:#1e1b4b}.b3{background:#0ea5e9}.bg{background:var(--ok)}
+button:disabled{opacity:.4;cursor:not-allowed}
+.rules{font-size:.85rem;color:var(--mut);padding-left:18px;margin:12px 0}
+.err{color:var(--bad);font-weight:600;min-height:1.2em;margin-top:8px}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:linear-gradient(90deg,#6d28d9,#2563eb);color:#fff;padding:10px 14px;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;align-items:center;font-size:.85rem}
+.pill{background:rgba(255,255,255,.2);padding:5px 12px;border-radius:99px;font-weight:700}
+#tm{font-size:1.1rem;font-variant-numeric:tabular-nums}#tm.low{background:var(--bad)}
+.grid2{display:grid;grid-template-columns:1fr 280px;gap:14px}
+@media(max-width:760px){.grid2{grid-template-columns:1fr}}
+.qn{font-size:.8rem;color:var(--pri);font-weight:700;margin-bottom:6px}
+.qt{font-size:1.05rem;line-height:1.5;margin:0 0 14px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:11px 12px;margin:8px 0;border:2px solid var(--bd);border-radius:12px;cursor:pointer;line-height:1.4}
+.opt:hover{border-color:var(--pri2)}.opt.sel{border-color:var(--pri);background:rgba(109,40,217,.12)}
+.opt b{background:var(--pri);color:#fff;border-radius:8px;min-width:28px;height:28px;display:grid;place-items:center}
+.nav{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}.nav button{flex:1;min-width:110px}
+.nums{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
+.nums button{padding:9px 0;background:var(--no);color:var(--tx)}
+.nums .a{background:var(--ok);color:#fff}.nums .r{background:var(--warn);color:#1e1b4b}.nums .c{outline:3px solid var(--pri);outline-offset:1px}
+.leg{display:flex;gap:10px;flex-wrap:wrap;font-size:.75rem;margin-top:12px;color:var(--mut)}
+.leg i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:4px;vertical-align:-1px}
+.modal{position:fixed;inset:0;background:rgba(15,23,42,.85);display:none;place-items:center;z-index:20;padding:16px}
+.modal.on{display:grid}.modal .card{max-width:440px;text-align:center}
+.score{font-size:3.4rem;font-weight:800;background:linear-gradient(90deg,#6d28d9,#06b6d4);-webkit-background-clip:text;background-clip:text;color:transparent;margin:0}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin:12px 0;text-align:left}
+.info div{background:var(--bg);padding:9px 12px;border-radius:10px;font-size:.88rem}.info small{display:block;color:var(--mut)}
+.rv{border-left:6px solid var(--bad);margin:12px 0;padding:12px 14px;background:var(--card);border-radius:10px;border-top:1px solid var(--bd);border-right:1px solid var(--bd);border-bottom:1px solid var(--bd)}
+.rv.ok{border-left-color:var(--ok)}.rv p{margin:5px 0;font-size:.92rem;line-height:1.45}
+.hide{display:none}
+</style>
+</head>
+<body oncontextmenu="return false">
+<div class="hero"><h1>🎓 Ujian Akhir Semester Ganjil</h1><p>Mata Pelajaran Ekonomi · Kelas X · 40 Soal Pilihan Ganda</p></div>
+
+<div class="wrap" id="s1">
+ <div class="card">
+  <h2 style="margin:0 0 4px">Data Peserta Didik</h2>
+  <label>Nama Siswa</label><input id="nm" autocomplete="off">
+  <label>Kelas</label><input id="kl" placeholder="contoh: X-1" autocomplete="off">
+  <label>Nomor Peserta Didik</label><input id="np" autocomplete="off">
+  <label>Asal Sekolah</label><input id="sk" autocomplete="off">
+  <label>Token Ujian (dari pengawas)</label><input id="tk" autocomplete="off" style="text-transform:uppercase;letter-spacing:2px">
+  <ul class="rules">
+   <li>Waktu ujian 60 menit; soal dan urutannya diacak.</li>
+   <li>Ujian berjalan layar penuh. Dilarang membuka tab atau jendela lain.</li>
+   <li>Pelanggaran pertama mendapat peringatan; pelanggaran kedua mengakhiri ujian otomatis.</li>
+  </ul>
+  <div class="err" id="er"></div>
+  <button class="b1" style="width:100%" onclick="start()">Mulai Ujian</button>
+ </div>
+</div>
+
+<div class="hide" id="s2">
+ <div class="top"><span class="pill" id="who"></span><span class="pill" id="wr">Peringatan: 0/1</span><span class="pill" id="tm">60:00</span></div>
+ <div class="wrap grid2">
+  <div class="card" id="qc"></div>
+  <div class="card"><b>Navigasi Soal</b><div class="nums" id="nums" style="margin-top:10px"></div>
+   <div class="leg"><span><i style="background:var(--ok)"></i>Dijawab</span><span><i style="background:var(--warn)"></i>Ragu-ragu</span><span><i style="background:var(--no)"></i>Belum</span></div>
+   <button class="bg" style="width:100%;margin-top:14px" onclick="ask()">Selesai Ujian</button></div>
+ </div>
+</div>
+
+<div class="hide wrap" id="s3"><div class="card" style="text-align:center">
+ <h2 style="margin:0">Hasil Ujian</h2><p class="score" id="sc"></p><div id="nt" style="color:var(--mut);font-size:.9rem"></div>
+ <div class="info" id="inf"></div></div>
+ <h3>Jawaban dan Pembahasan</h3><div id="rv"></div></div>
+
+<div class="modal" id="m1"><div class="card"><h2 style="color:var(--bad);margin:0 0 8px">⚠️ Peringatan Kecurangan</h2><p id="m1t"></p><button class="b1" onclick="back()">Saya Mengerti, Lanjutkan</button></div></div>
+<div class="modal" id="m2"><div class="card"><h2 style="margin:0 0 8px">Akhiri Ujian?</h2><p id="m2t"></p><div class="nav"><button class="b3" onclick="cm('m2')">Kembali</button><button class="bg" onclick="cm('m2');finish('Selesai oleh siswa')">Ya, Selesai</button></div></div></div>
+
+<script>
+const TOKEN="EKO10",DUR=60*60;
+const Q=[
+["Ilmu ekonomi pada dasarnya mempelajari ...",["cara pemerintah memungut pajak dari masyarakat","cara perusahaan memperoleh laba sebesar-besarnya","perilaku manusia dalam memenuhi kebutuhan yang tidak terbatas dengan alat pemuas kebutuhan yang terbatas","proses pembuatan barang di pabrik","cara mengelola keuangan negara"],2,"Ilmu ekonomi mempelajari pemenuhan kebutuhan tak terbatas dengan alat pemuas yang terbatas."],
+["Penyebab utama timbulnya kelangkaan adalah ...",["kebutuhan manusia jumlahnya terbatas","sumber daya terbatas, sedangkan kebutuhan manusia tidak terbatas","harga barang yang terlalu mahal","produsen tidak mau berproduksi","barang selalu disimpan oleh pedagang"],1,"Kelangkaan muncul karena sumber daya terbatas, sedangkan kebutuhan tidak terbatas."],
+["Seorang pedagang berusaha memperoleh hasil yang maksimal dengan pengorbanan yang sekecil-kecilnya. Tindakan tersebut merupakan penerapan ...",["motif sosial","motif kekuasaan","motif keamanan","prinsip ekonomi","skala prioritas"],3,"Hasil maksimal dengan pengorbanan minimal adalah prinsip ekonomi."],
+["Rina memiliki uang Rp50.000 yang dapat dipakai membeli buku atau makan di restoran. Rina memilih membeli buku. Biaya peluang (opportunity cost) keputusan Rina adalah ...",["makan di restoran","uang sebesar Rp50.000","buku yang dibeli","kepuasan setelah membaca buku","uang saku bulan depan"],0,"Biaya peluang adalah pilihan terbaik yang dikorbankan, yaitu makan di restoran."],
+["Berdasarkan tingkat kepentingannya, yang termasuk kebutuhan tersier adalah ...",["makan tiga kali sehari","pakaian seragam sekolah","rumah tinggal sederhana","buku pelajaran","mobil sport mewah bagi seorang pegawai biasa"],4,"Kebutuhan tersier bersifat mewah dan tidak mendesak."],
+["Berikut ini yang termasuk kajian ilmu ekonomi makro adalah ...",["harga beras di pasar tradisional","keputusan konsumen membeli sepatu","tingkat inflasi dan pengangguran nasional","cara produsen menentukan harga jual","keuntungan sebuah warung kelontong"],2,"Inflasi dan pengangguran nasional dibahas dalam ekonomi makro."],
+["Tiga masalah pokok ekonomi yang dihadapi setiap masyarakat adalah ...",["kapan, di mana, dan siapa yang berproduksi","barang apa yang diproduksi, bagaimana cara memproduksi, dan untuk siapa barang diproduksi","berapa harga, berapa pajak, dan berapa keuntungan","produksi, konsumsi, dan distribusi","modal, tenaga kerja, dan bahan baku"],1,"Masalah pokok ekonomi: what, how, dan for whom."],
+["Ciri sistem ekonomi tradisional adalah ...",["pemerintah menentukan semua kegiatan ekonomi","harga ditentukan sepenuhnya oleh mekanisme pasar","modal dikuasai perusahaan-perusahaan besar","teknologi yang digunakan sudah sangat canggih","kegiatan ekonomi berdasarkan adat dan kebiasaan turun-temurun dengan teknologi sederhana"],4,"Sistem tradisional berpegang pada adat dan teknologi sederhana."],
+["Hak milik pribadi diakui, persaingan bebas, dan harga ditentukan mekanisme pasar merupakan ciri sistem ekonomi ...",["liberal (kapitalis)","sosialis","tradisional","komando","campuran"],0,"Hak milik pribadi dan mekanisme pasar adalah ciri sistem liberal."],
+["Dalam sistem ekonomi komando (sosialis), masalah pokok ekonomi diselesaikan dengan cara ...",["diserahkan kepada mekanisme pasar","diatur berdasarkan adat istiadat","diserahkan kepada pihak swasta","ditentukan pemerintah pusat melalui perencanaan terpusat","diputuskan konsumen dan produsen secara bebas"],3,"Dalam sistem komando, keputusan ekonomi diambil pemerintah pusat."],
+["Pasal 33 UUD 1945 menyatakan bahwa cabang-cabang produksi yang penting bagi negara dan menguasai hajat hidup orang banyak ...",["dikuasai pihak swasta asing","diserahkan kepada pihak swasta nasional","dikuasai oleh negara","dikelola oleh perorangan","dibebaskan dari campur tangan pemerintah"],2,"Sesuai Pasal 33 ayat (2) UUD 1945, cabang produksi penting dikuasai oleh negara."],
+["Sistem ekonomi yang memberi peran kepada pemerintah dan swasta secara bersama-sama disebut sistem ekonomi ...",["tradisional","campuran","liberal","komando","kapitalis murni"],1,"Peran pemerintah dan swasta bersama-sama merupakan ciri sistem campuran."],
+["Rumah tangga keluarga (RTK) berperan sebagai ...",["produsen barang dan jasa","pengatur kebijakan moneter","penerbit uang kartal","penyedia barang publik","pemilik faktor produksi sekaligus konsumen barang dan jasa"],4,"RTK adalah pemilik faktor produksi sekaligus konsumen."],
+["Berikut ini yang termasuk contoh rumah tangga produsen (RTP) adalah ...",["pabrik sepatu yang mengolah bahan baku menjadi sepatu","keluarga yang membeli beras di pasar","siswa yang membeli alat tulis","pegawai yang menerima gaji bulanan","pemerintah yang memungut pajak"],0,"Pabrik yang mengolah bahan baku menjadi barang adalah contoh RTP."],
+["Pemerintah membangun jalan, jembatan, dan sekolah untuk kepentingan masyarakat. Peran pemerintah tersebut adalah sebagai ...",["konsumen barang konsumsi","pemilik faktor produksi","produsen barang mewah","penyedia barang dan jasa publik","penerima balas jasa faktor produksi"],3,"Pembangunan fasilitas umum merupakan peran pemerintah sebagai penyedia barang dan jasa publik."],
+["Pengepul membeli hasil panen dari petani lalu menjualnya kepada pedagang di pasar. Kegiatan pengepul termasuk kegiatan ...",["produksi","konsumsi","distribusi","investasi","ekspor"],2,"Menyalurkan barang dari produsen ke konsumen adalah kegiatan distribusi."],
+["Dalam diagram aliran melingkar (circular flow diagram), aliran upah, sewa, bunga, dan laba mengalir dari ...",["RTK kepada RTP sebagai pembayaran barang","RTP kepada RTK sebagai balas jasa faktor produksi","RTK kepada pemerintah sebagai pajak","pemerintah kepada RTP sebagai subsidi","RTP kepada pemerintah sebagai hasil penjualan"],1,"Balas jasa faktor produksi mengalir dari RTP ke RTK."],
+["Seorang manajer mengatur dan menggabungkan faktor-faktor produksi lain agar usaha berjalan efisien. Faktor produksi yang dimaksud adalah ...",["sumber daya alam","modal","tenaga kerja kasar","bahan baku","keahlian atau kewirausahaan"],4,"Pengelola yang menggabungkan faktor produksi berperan sebagai keahlian atau kewirausahaan."],
+["Jual beli saham dan valuta asing melalui telepon atau internet tanpa penjual dan pembeli bertemu langsung disebut pasar ...",["abstrak","nyata","tradisional","induk","konkret"],0,"Pasar yang transaksinya tidak mempertemukan langsung penjual dan pembeli adalah pasar abstrak."],
+["Ciri pasar persaingan sempurna adalah ...",["hanya ada satu penjual","terdapat beberapa penjual besar","produk dibedakan melalui merek","penjual dan pembeli banyak, produk homogen, dan tidak ada yang dapat memengaruhi harga","penjual bebas menentukan harga tanpa pesaing"],3,"Penjual dan pembeli banyak, produk homogen, dan harga ditentukan pasar."],
+["Pasar monopoli ditandai dengan ...",["banyak penjual dengan produk beragam","beberapa penjual yang saling bergantung","hanya ada satu penjual dan tidak ada barang substitusi yang dekat","hanya ada satu pembeli","harga ditentukan oleh pembeli"],2,"Monopoli: satu penjual, tanpa barang pengganti yang dekat."],
+["Pasar yang dikuasai beberapa perusahaan besar yang keputusan harganya saling memengaruhi disebut pasar ...",["monopoli","oligopoli","persaingan sempurna","monopsoni","persaingan monopolistik"],1,"Beberapa perusahaan besar yang saling bergantung membentuk pasar oligopoli."],
+["Banyak penjual dengan produk sejenis tetapi memiliki ciri khas (diferensiasi), seperti sabun mandi dan restoran, merupakan ciri pasar ...",["monopoli","oligopoli","persaingan sempurna","monopsoni","persaingan monopolistik"],4,"Banyak penjual dengan produk terdiferensiasi adalah persaingan monopolistik."],
+["Lembaga keuangan yang menghimpun dana masyarakat dalam bentuk simpanan dan menyalurkannya dalam bentuk kredit adalah ...",["bank umum dan BPR","perusahaan asuransi","pegadaian","dana pensiun","perusahaan pembiayaan"],0,"Bank umum dan BPR menghimpun simpanan dan menyalurkan kredit."],
+["Berikut ini yang termasuk lembaga keuangan bukan bank adalah ...",["bank umum","bank perkreditan rakyat","bank syariah","pegadaian","Bank Indonesia"],3,"Pegadaian termasuk lembaga keuangan bukan bank."],
+["Fungsi bank sebagai lembaga perantara (intermediasi) keuangan adalah ...",["mencetak uang kertas dan uang logam","menetapkan suku bunga acuan nasional","menghimpun dana dari masyarakat yang kelebihan dana dan menyalurkannya kepada yang membutuhkan dana","mengawasi seluruh lembaga jasa keuangan","menjamin simpanan nasabah bank"],2,"Intermediasi berarti menghubungkan pihak yang kelebihan dana dengan pihak yang kekurangan dana."],
+["Lembaga yang berwenang mengatur dan mengawasi seluruh kegiatan jasa keuangan di Indonesia adalah ...",["Bank Indonesia","Kementerian Keuangan","Lembaga Penjamin Simpanan","Badan Pusat Statistik","Otoritas Jasa Keuangan"],4,"OJK mengatur dan mengawasi sektor jasa keuangan."],
+["Prinsip kerja perusahaan asuransi adalah ...",["menyimpan emas milik masyarakat","mengalihkan risiko dari tertanggung kepada penanggung dengan membayar premi","memberikan pinjaman dengan jaminan barang bergerak","memperdagangkan saham perusahaan","menerbitkan uang elektronik"],1,"Asuransi mengalihkan risiko dengan imbalan premi."],
+["Tujuan Bank Indonesia sebagai bank sentral adalah ...",["mencapai dan memelihara stabilitas nilai rupiah","memberikan kredit kepada masyarakat umum","menghimpun dana dari rumah tangga","mencari keuntungan sebesar-besarnya","menjual saham perusahaan negara"],0,"Tujuan tunggal Bank Indonesia adalah memelihara stabilitas nilai rupiah."],
+["Contoh alat pembayaran berupa uang giral adalah ...",["uang kertas rupiah","uang logam","koin emas","cek dan bilyet giro","emas batangan"],3,"Cek dan bilyet giro termasuk uang giral."],
+["QRIS (Quick Response Code Indonesian Standard) adalah ...",["uang logam pecahan khusus","kartu kredit dari bank asing","standar kode QR nasional untuk pembayaran yang ditetapkan oleh Bank Indonesia","bilyet giro elektronik","alat pembayaran khusus perusahaan besar"],2,"QRIS adalah standar QR pembayaran nasional dari Bank Indonesia."],
+["Sistem transfer dana bernilai besar yang penyelesaiannya dilakukan secara seketika (real time) oleh Bank Indonesia disebut ...",["SKNBI","BI-RTGS","QRIS","ATM","kliring manual"],1,"BI-RTGS melayani transfer bernilai besar secara real time."],
+["Ciri utama perseroan terbatas (PT) adalah ...",["modal berasal dari satu orang pemilik","tanggung jawab pemilik tidak terbatas","didirikan tanpa akta notaris","kekayaan perusahaan menyatu dengan kekayaan pribadi","modal terbagi atas saham dan tanggung jawab pemegang saham terbatas pada modal yang disetorkan"],4,"PT bermodal saham dengan tanggung jawab pemegang saham terbatas."],
+["Dalam persekutuan komanditer (CV), sekutu aktif (komplementer) memiliki ciri ...",["bertanggung jawab penuh sampai harta pribadi dan mengelola perusahaan","hanya menyetor modal tanpa ikut mengelola","tanggung jawab terbatas pada modal yang disetor","tidak boleh menerima keuntungan","tidak memiliki hak suara apa pun"],0,"Sekutu komplementer mengelola usaha dan bertanggung jawab penuh."],
+["BUMN yang berbentuk perseroan terbatas, modalnya terbagi atas saham yang minimal 51% dimiliki negara, dan bertujuan mencari keuntungan adalah ...",["Perum","Perjan","koperasi","Persero","firma"],3,"Persero berbentuk PT dengan minimal 51% saham dimiliki negara dan berorientasi laba."],
+["Kelemahan perusahaan perseorangan adalah ...",["pendiriannya sangat rumit","keuntungan harus dibagi kepada banyak pihak","tanggung jawab pemilik tidak terbatas sampai harta pribadi","pengambilan keputusan lambat","modal dikumpulkan dari penjualan saham"],2,"Pemilik perusahaan perseorangan menanggung risiko sampai harta pribadi."],
+["Tokoh yang dijuluki Bapak Koperasi Indonesia adalah ...",["Ir. Soekarno","Mohammad Hatta","Sutan Sjahrir","R. Aria Wiriaatmadja","Ki Hajar Dewantara"],1,"Mohammad Hatta dikenal sebagai Bapak Koperasi Indonesia."],
+["Salah satu prinsip koperasi adalah ...",["keanggotaan bersifat wajib bagi seluruh warga","modal terbesar menentukan suara terbanyak","keuntungan hanya untuk pengurus","pengelolaan dilakukan oleh pemerintah","keanggotaan bersifat sukarela dan terbuka"],4,"Keanggotaan koperasi sukarela dan terbuka."],
+["Sisa hasil usaha (SHU) koperasi dibagikan kepada anggota berdasarkan ...",["jasa usaha (partisipasi) masing-masing anggota dan jasa modal","lamanya menjadi anggota saja","jabatan anggota dalam kepengurusan","banyaknya saham yang dimiliki","keputusan pengawas secara sepihak"],0,"SHU dibagi sesuai jasa usaha anggota dan jasa modal."],
+["Pemegang kekuasaan tertinggi dalam organisasi koperasi adalah ...",["pengurus","pengawas","manajer","rapat anggota","pemerintah daerah"],3,"Rapat anggota adalah kekuasaan tertinggi koperasi."]
+];
+const $=id=>document.getElementById(id),L="ABCDE";
+let ord=[],ans={},flg={},cur=0,end=0,tmr,run=false,warned=false,lock=0,fsOK=false,P={},viol=0;
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function cm(i){$(i).classList.remove("on")}
+async function start(){
+ P={nm:$("nm").value.trim(),kl:$("kl").value.trim(),np:$("np").value.trim(),sk:$("sk").value.trim()};
+ if(!P.nm||!P.kl||!P.np||!P.sk){$("er").textContent="Lengkapi semua data peserta.";return}
+ if($("tk").value.trim().toUpperCase()!==TOKEN){$("er").textContent="Token salah. Tanyakan token kepada pengawas.";return}
+ try{await document.documentElement.requestFullscreen();fsOK=true}catch(e){fsOK=false}
+ ord=shuffle(Q.map((_,i)=>i));cur=0;ans={};flg={};warned=false;viol=0;
+ $("s1").classList.add("hide");$("s2").classList.remove("hide");
+ $("who").textContent=P.nm+" · "+P.kl;
+ end=Date.now()+DUR*1000;run=true;tick();tmr=setInterval(tick,500);render();
+}
+function tick(){
+ const s=Math.max(0,Math.round((end-Date.now())/1000));
+ $("tm").textContent=String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0");
+ $("tm").classList.toggle("low",s<300);
+ if(s<=0&&run)finish("Waktu habis");
+}
+function render(){
+ const q=Q[ord[cur]],k=ord[cur];
+ $("qc").innerHTML='<div class="qn">Soal '+(cur+1)+' dari '+Q.length+'</div><p class="qt">'+esc(q[0])+'</p>'+
+ q[1].map((o,i)=>'<div class="opt'+(ans[k]===i?' sel':'')+'" onclick="pick('+i+')"><b>'+L[i]+'</b><span>'+esc(o)+'</span></div>').join("")+
+ '<div class="nav"><button class="b3" onclick="go(-1)" '+(cur==0?'disabled':'')+'>◀ Sebelumnya</button>'+
+ '<button class="b2" onclick="rg()">'+(flg[k]?'✔ Batal Ragu-ragu':'Ragu-ragu')+'</button>'+
+ '<button class="b1" onclick="go(1)" '+(cur==Q.length-1?'disabled':'')+'>Selanjutnya ▶</button></div>';
+ $("nums").innerHTML=ord.map((x,i)=>'<button class="'+(flg[x]?'r':ans[x]!==undefined?'a':'')+(i==cur?' c':'')+'" onclick="cur='+i+';render()">'+(i+1)+'</button>').join("");
+}
+function pick(i){ans[ord[cur]]=i;render()}
+function rg(){const k=ord[cur];flg[k]=!flg[k];render()}
+function go(d){cur=Math.min(Q.length-1,Math.max(0,cur+d));render()}
+function ask(){
+ const un=Q.length-Object.keys(ans).length,rr=Object.values(flg).filter(Boolean).length;
+ $("m2t").textContent="Belum dijawab: "+un+" soal. Ragu-ragu: "+rr+" soal. Setelah selesai, jawaban tidak dapat diubah.";
+ $("m2").classList.add("on");
+}
+function finish(why){
+ if(!run)return;run=false;clearInterval(tmr);
+ if(document.fullscreenElement)try{document.exitFullscreen()}catch(e){}
+ cm("m1");cm("m2");
+ let ok=0;Q.forEach((q,i)=>{if(ans[i]===q[2])ok++});
+ const sc=Math.round(ok/Q.length*100*100)/100;
+ $("s2").classList.add("hide");$("s3").classList.remove("hide");
+ $("sc").textContent=sc;
+ $("nt").textContent=ok+" benar dari "+Q.length+" soal · "+why;
+ $("inf").innerHTML=[["Nama",P.nm],["Kelas",P.kl],["No. Peserta Didik",P.np],["Asal Sekolah",P.sk]].map(a=>"<div><small>"+a[0]+"</small><b>"+esc(a[1])+"</b></div>").join("");
+ $("rv").innerHTML=ord.map((k,n)=>{const q=Q[k],a=ans[k],good=a===q[2];
+  return '<div class="rv'+(good?' ok':'')+'"><p><b>'+(n+1)+'. '+esc(q[0])+'</b></p><p>Jawaban kamu: <b>'+(a===undefined?'tidak dijawab':L[a]+'. '+esc(q[1][a]))+'</b> '+(good?'✅':'❌')+'</p><p>Jawaban benar: <b>'+L[q[2]]+'. '+esc(q[1][q[2]])+'</b></p><p>💡 Pembahasan: '+esc(q[3])+'</p></div>'}).join("");
+ scrollTo(0,0);
+}
+/* Anti curang */
+function cheat(r){
+ if(!run||Date.now()-lock<1500)return;lock=Date.now();viol++;
+ if(!warned){warned=true;$("wr").textContent="Peringatan: 1/1";
+  $("m1t").textContent="Terdeteksi: "+r+". Ini peringatan satu-satunya. Jika terulang, ujian akan diakhiri otomatis dan jawabanmu dinilai.";
+  $("m1").classList.add("on");
+ }else finish("Ujian dihentikan: pelanggaran berulang ("+r+")");
+}
+async function back(){cm("m1");lock=Date.now();if(fsOK&&!document.fullscreenElement)try{await document.documentElement.requestFullscreen()}catch(e){}}
+document.addEventListener("visibilitychange",()=>{if(document.hidden)cheat("berpindah tab atau meminimalkan jendela")});
+window.addEventListener("blur",()=>cheat("membuka jendela atau aplikasi lain"));
+document.addEventListener("fullscreenchange",()=>{if(fsOK&&!document.fullscreenElement)cheat("keluar dari layar penuh")});
+["copy","cut","paste","dragstart"].forEach(e=>document.addEventListener(e,ev=>{if(run)ev.preventDefault()}));
+document.addEventListener("keydown",e=>{if(!run)return;const k=e.key.toLowerCase();
+ if(e.key==="F12"||e.key==="PrintScreen"||e.key==="Meta"||(e.ctrlKey||e.metaKey)&&["c","v","x","u","s","p","a"].includes(k)||(e.ctrlKey&&e.shiftKey&&["i","j","c"].includes(k)))e.preventDefault()});
+window.addEventListener("beforeunload",e=>{if(run){e.preventDefault();e.returnValue=""}});
+</script>
+</body>
+</html>
